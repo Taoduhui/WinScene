@@ -1,0 +1,2 @@
+# WinScene
+使用Naudio与wavelib完成的windows场景模式
