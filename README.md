@@ -1,2 +1,4 @@
 # WinScene
 使用Naudio与wavelib完成的windows场景模式
+
+在戴耳机打游戏时仍能听到外界声音但不被噪音影响游戏
