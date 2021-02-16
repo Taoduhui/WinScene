@@ -1,0 +1,107 @@
+﻿<Window x:Class="WpfApp11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp11"
+        mc:Ignorable="d"
+        Title="WinScene" Height="500" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <StackPanel>
+                <Border  Background="White" Padding="10,10,10,0" ToolTip="选择使用的麦克风">
+                    <Label Content="声卡选择"></Label>
+                </Border>
+                <Border  Background="White" Padding="10" ToolTip="选择使用的麦克风">
+                    <ComboBox x:Name="SoundCardSelect" VerticalAlignment="Top"/>
+                </Border>
+                <Border  Background="White" Padding="10,10,10,0"  ToolTip="点击按钮设置麦克风收录快捷键">
+                    <Label Content="快捷键"></Label>
+                </Border>
+                <Border  Background="White" Padding="10,10,10,0" ToolTip="点击按钮设置麦克风收录快捷键">
+                    <Button x:Name="SetHotKeyBtn" HorizontalAlignment="Stretch" Click="SetHotKeyBtn_Click">F3</Button>
+                </Border>
+                <Border Background="White" Padding="10,10,10,0" ToolTip="出现高频噪音调低，出现人声不被收录调高">
+                    <Label Content="截止频率"></Label>
+                </Border>
+                <Border  Background="White" Padding="10" ToolTip="出现高频噪音调低，出现人声不被收录调高">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <WrapPanel HorizontalAlignment="Center">
+                            <Label HorizontalAlignment="Center" Content="{Binding ElementName=CutOffFreqSlider,Path=Value,Mode=OneWay}"></Label>
+                            <Label HorizontalAlignment="Center">Hz</Label>
+                        </WrapPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="1.2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label >0Hz</Label>
+                            <Slider x:Name="CutOffFreqSlider" IsSnapToTickEnabled="True" VerticalAlignment="Center" Maximum="5000" Value="500" Grid.Column="1"/>
+                            <Label Grid.Column="2">5KHz</Label>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <Border  Background="White" Padding="10,10,10,0">
+                    <Label Content="响度阈值"  ToolTip="出现噪音调高，出现人声不被收录调低"></Label>
+                </Border>
+                <Border  Background="White" Padding="10" ToolTip="出现噪音调高，出现人声不被收录调低">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <WrapPanel HorizontalAlignment="Center">
+                            <Label HorizontalAlignment="Center" Content="{Binding ElementName=VolumeThresholdSlider,Path=Value,Mode=OneWay}"></Label>
+                            <Label HorizontalAlignment="Center">%</Label>
+                        </WrapPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="1.2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label >0</Label>
+                            <Slider x:Name="VolumeThresholdSlider" IsSnapToTickEnabled="True" VerticalAlignment="Center" Maximum="100" Value="10" Grid.Column="1" ValueChanged="VolumeThresholdSlider_ValueChanged"/>
+                            <Label Grid.Column="2">100</Label>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <Border  Background="White" Padding="10,10,10,0">
+                    <Label Content="响度增益"  ToolTip="放大监听音量"></Label>
+                </Border>
+                <Border  Background="White" Padding="10" ToolTip="放大监听音量">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <WrapPanel HorizontalAlignment="Center">
+                            <Label HorizontalAlignment="Center" Content="{Binding ElementName=VolumeAmpSlider,Path=Value,Mode=OneWay}"></Label>
+                            <Label HorizontalAlignment="Center">dB</Label>
+                        </WrapPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="1.2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label >1</Label>
+                            <Slider x:Name="VolumeAmpSlider" IsSnapToTickEnabled="True" VerticalAlignment="Center" Maximum="10" Value="0" Minimum="-10" Grid.Column="1" ValueChanged="VolumeAmpSlider_ValueChanged"/>
+                            <Label Grid.Column="2">10</Label>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+        <Button Grid.Row="1" x:Name="Active" Content="激活" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Active_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+C:\Users\X6TI-S\source\repos\SoundControler\WaveLibMixer\bin\Release\WaveLibMixer.dll
+C:\Users\X6TI-S\source\repos\SoundControler\WaveLibMixer\bin\Release\NAudio.dll
+C:\Users\X6TI-S\source\repos\SoundControler\WaveLibMixer\bin\Release\NAudio.xml
+C:\Users\X6TI-S\source\repos\SoundControler\WaveLibMixer\obj\Release\WaveLibMixer.csprojAssemblyReference.cache
+C:\Users\X6TI-S\source\repos\SoundControler\WaveLibMixer\obj\Release\WaveLibMixer.csproj.CoreCompileInputs.cache
+C:\Users\X6TI-S\source\repos\SoundControler\WaveLibMixer\obj\Release\WaveLibMixer.csproj.CopyComplete
+C:\Users\X6TI-S\source\repos\SoundControler\WaveLibMixer\obj\Release\WaveLibMixer.dll

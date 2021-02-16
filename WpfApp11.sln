@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp11", "WpfApp11\WpfApp11.csproj", "{CC46BAE0-35C1-474F-99A5-47107AF96A0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveLibMixer", "..\SoundControler\WaveLibMixer\WaveLibMixer.csproj", "{6F3FA628-01C6-48AF-9D1A-9BB1EAF8D259}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC46BAE0-35C1-474F-99A5-47107AF96A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC46BAE0-35C1-474F-99A5-47107AF96A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC46BAE0-35C1-474F-99A5-47107AF96A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC46BAE0-35C1-474F-99A5-47107AF96A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F3FA628-01C6-48AF-9D1A-9BB1EAF8D259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3FA628-01C6-48AF-9D1A-9BB1EAF8D259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F3FA628-01C6-48AF-9D1A-9BB1EAF8D259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3FA628-01C6-48AF-9D1A-9BB1EAF8D259}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9921645-C34E-4AA8-A30F-452CEAE64D7F}
+	EndGlobalSection
+EndGlobal
